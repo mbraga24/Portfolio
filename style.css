@@ -4,8 +4,7 @@
 }
 
 body {
-  font-family: 'Varela Round', sans-serif;
-  background-color: #333333;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   color: #CCFFFF;
   line-height: 1.6;
   height: 100vh; 
@@ -52,7 +51,6 @@ body {
 }
 
 .sections {
-  font-family: 'Amatic SC', cursive;
   position: relative;
   display: flex; 
   flex-direction: column;
@@ -65,17 +63,20 @@ body {
 }
 
 .sections h1 {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 .sections h2 {
-  /* font-family: 'Caveat Brush', cursive; */
-  font-family: 'Cardo', serif;
+  font-weight: 300;
   font-size: 2.5rem;
 }
 
 .sections p {
   font-size: 1.5rem;
+}
+
+.sections h3 {
+  font-size: 2rem;
 }
 
 section#home {
@@ -87,15 +88,17 @@ section#home {
 }
 
 section#iam {
-  background: url("about-1.jpeg") no-repeat center center/ cover;
+  background: #660022;
 }
 
 section#projects {
-  background: url("projects.jpeg") no-repeat center center/ cover;
+  background: #E6FFF7;
+  color: #000033;
+  text-shadow: none;
 }
 
 section#resume {
-  background: url("resume-4.jpeg") no-repeat center center/ cover;
+  background: #000033;
 }
 
 #sectionScroll::after {
@@ -120,10 +123,15 @@ section#resume {
   letter-spacing: .1em;
   text-decoration: none;
   transition: opacity .3s;
+  text-shadow: none
 }
 
 .demo a:hover {
   opacity: .5;
+}
+
+.demo-projects a {
+  color: black;
 }
 
 #sectionScroll a {
@@ -141,6 +149,11 @@ section#resume {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   box-sizing: border-box;
+}
+
+#sectionScroll a .span-projects {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 @keyframes change {
