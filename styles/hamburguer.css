@@ -1,7 +1,7 @@
 .container .menu-anchor:after {
   content: '';
   position: absolute;
-  background: #E6FFF7;
+  background: #008a8a  ;
   height: 2px;
   width: 0%;
   transform: translateX(-50%);
@@ -25,28 +25,31 @@
 
 .button_container.active .top {
   transform: translateY(-13px) translateX(-9px) rotate(70deg);
-  background: #E6FFF7;
+  background: #E6FFF7  ;
   border-radius: 10px;
   width: 80%;
 }
 .button_container.active .middle-1 {
   transform: translateY(0px) translateX(-15px) rotate(-70deg);
-  background: #E6FFF7;
+  background: #E6FFF7  ;
   border-radius: 10px;
 }
 .button_container.active .middle-2 {
   transform: translateY(10px) translateX(14px) rotate(72deg);
-  background: #E6FFF7;
+  background: #E6FFF7  ;
   border-radius: 10px;
 }
 .button_container.active .bottom {
   transform: translateY(-13px) translateX(0) rotate(-67deg);
-    background: #E6FFF7;
+    background: #E6FFF7  ;
     border-radius: 10px;
     width: 80%;
 }
+
+/* Hamburguer menu before active */
+
 .button_container span {
-  background: #E6FFF7;
+  background: #008a8a  ;
   border: none;
   height: 5px;
   width: 100%;
@@ -120,7 +123,7 @@
 .overlay ul li a {
   display: block;
   position: relative;
-  color: #E6FFF7;
+  color: #E6FFF7  ;
   text-decoration: none;
   overflow: hidden;
   font-size: 4.5rem;
@@ -136,7 +139,7 @@
   width: 0%;
   transform: translateX(-50%);
   height: 3px;
-  background: #fff;
+  background: #E6FFF7;
   transition: 0.35s;
 }
 @keyframes fadeInRight {
