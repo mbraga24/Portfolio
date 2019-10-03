@@ -1,4 +1,4 @@
-$(".navigationBar a, #sectionScroll a").on("click", function(e) {
+$(".scroll-arrow a, #thanks a").on("click", function(e) {
   if(this.hash !== "") {
     e.preventDefault();
 
@@ -10,6 +10,10 @@ $(".navigationBar a, #sectionScroll a").on("click", function(e) {
   }
 })
 
+$('#toggle').click(function() {
+  $(this).toggleClass('active');
+  $('#overlay').toggleClass('open');
+ });
 
 // “Experience is not what happens to a man; it is what a man does with what happens to him.”
 // ― Aldous Huxley
@@ -22,3 +26,7 @@ $(".navigationBar a, #sectionScroll a").on("click", function(e) {
 
 // “When we love, we always strive to become better than we are. When we strive to become better than we are, everything around us becomes better too.”
 // ― Paulo Coelho, The Alchemist
+
+      //  <h2>“And, when you want something, all the universe conspires</h2>
+      //   <h2>in helping you to achieve it.”</h2>
+      //   <h3>- Paulo Coelho, The Alchemist</h3>

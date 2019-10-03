@@ -4,46 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/hamburguer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <title>Hi, I'm Marlon!</title>
 </head>
 <body>
 
   <div class="container">
-    <nav class="navigationBar">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#iam">I am</a></li>
-        <li><a href="#projects">Projects</a></li> 
-        <li><a href="#resume ">Resume</a></li>
-      </ul>
-    </nav> 
-
     <section class="sections" id="home">
       <h1><span>Hi</span>, my name is Marlon!</h1>
       <h2>I'm a Junior Software Engineer</h2>
-      <section id="sectionScroll" class="demo">
-        <a href="#iam"><span></span>Scroll</a>
+      <section class="scroll-arrow arrow-down demo-down">
+        <a href="#about"><span></span></a>
       </section>
     </section>
-    <section class="sections" id="iam">
-        <h1>I am</h1>
-        <h2>“And, when you want something, all the universe conspires</h2>
-        <h2>in helping you to achieve it.”</h2>
-        <h3>- Paulo Coelho, The Alchemist</h3>
-        <section id="sectionScroll" class="demo">
-          <a href="#projects"><span></span>Scroll</a>
+    <section class="sections" id="about">
+        <section class="scroll-arrow arrow-up demo-up">
+            <a href="#home"><span></span></a>
+        </section>
+        <h1><a href="about.html">My Story</a></h1>
+        <section class="scroll-arrow arrow-down demo-down">
+          <a href="#projects"><span></span></a>
         </section>
     </section>
     <section class="sections" id="projects">
-        <h1>Projects</h1>
-        <section id="sectionScroll" class="demo demo-projects">
-          <a href="#resume"><span class="span-projects"></span>Scroll</a>
+        <section class="scroll-arrow arrow-up demo-up">
+            <a href="#about"><span class="span-projects"></span></a>
+        </section>
+        <h1> <a href="projects.html"></a>Projects</h1>
+        <section class="scroll-arrow arrow-down demo-down">
+          <a href="#resume"><span class="span-projects"></span></a>
         </section>
     </section>
     <section class="sections" id="resume">
-        <h1>Resume</h1>
+        <section class="scroll-arrow arrow-up demo-up">
+            <a href="#projects"><span></span></a>
+        </section>
+        <h1> <a href="resume.html"></a>Resume</h1>
+        <section id="thanks">
+          <div>
+            <p><a href="#home" target="_parent">&lt; Back to top</a></p>
+          </div>
+        </section>
     </section>
+  </div>
+
+
+  <div class="button_container" id="toggle"><span class="top"></span><span class="middle-1"></span><span class="middle-2"></span><span class="bottom"></span></div>
+  <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+          <ul>
+            <li><a class="menu-anchor" href="#home">Home</a></li>
+            <li><a class="menu-anchor" href="about.html">About Me</a></li>
+            <li><a class="menu-anchor" href="projects.html">Projects</a></li>
+            <li><a class="menu-anchor" href="resume.html">Resume</a></li>
+          </ul>
+      </nav>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
   <script src="main.js"></script>
