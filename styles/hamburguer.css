@@ -126,7 +126,7 @@
   color: #E6FFF7  ;
   text-decoration: none;
   overflow: hidden;
-  font-size: 4.5rem;
+  font-size: 3rem;
 }
 .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
   width: 100%;
@@ -152,24 +152,3 @@
     left: 0;
 }
 }
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-
-  #home h1 {
-    font-size: 3rem;
-  }
-
-  #home h2 {
-    font-size: 2rem;
-  }
-
-  .sections h1 {
-    font-size: 4.5rem;
-  }
-
-  .overlay ul li a {
-    font-size: 3rem;
-  }
-  
- }
