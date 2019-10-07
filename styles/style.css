@@ -8,7 +8,7 @@ body {
   color: #e6ffff ;
   line-height: 1.6;
   height: 100vh; 
-  text-shadow: 2px 2px 1px black;
+  text-shadow: 2px 2px 1px #000000;
   /* overflow: hidden; */
 } 
 
@@ -56,8 +56,8 @@ section#home {
   background: linear-gradient(45deg, #990033, #4430ad, #d35252, #0077B3);
   background-size: 400% 400%;
   animation: change 10s ease-in-out infinite; 
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%); */
 }
 
 section#projects {
