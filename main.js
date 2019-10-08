@@ -25,19 +25,17 @@ $(document).ready(function () {
   .addTo(controller)
 
   // Loop through each title.
-  $('.fade-in').each(function() {
+  $('fade-in').each(function() {
 
     // Build a tween.
-    var tween = TweenMax.from($(this), 0.5, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn});
+    var tweenHomePage = TweenMax.from($(this), 0.5, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn});
 
     // Build scene
     var pageTitlesScene = new ScrollMagic.Scene({
       triggerElement: this,
-      // duration: "100%",
       triggerHook: 0.8
-      // reverse: false
     })
-    .setTween(tween)
+    .setTween(tweenHomePage)
     .addIndicators({
       name: "fade scene",
       colorTrigger: "black",
@@ -52,31 +50,35 @@ $(document).ready(function () {
 // PROJECTS PAGE
 // ===================================================
 var header = $("#content-header"),
-    titleHeader = $("#header-title"),
-    timeLine = new TimelineLite(),
-    firstRow = $('.firstRow');
-    // console.log(firstRow)
+    titleHeader = $("#header-title");
 
-// Header animation.
+// ================ HEADER ANIMATION ================
 
 TweenMax.from(header, 1, {autoAlpha: 0, y: -400, ease:Power1.easeOut})
 TweenMax.from(titleHeader, 1, {autoAplha: 0, y: -200, delay: 0.5, ease:Power1.easeOut})
 
-// Cards animation.
+// ================ CARD ANIMATION ================
 
-timeLine
-  .staggerFromTo(firstRow, 0.5, {autoAlpha: 0, y: 100},
-    {autoAlpha: 1, y: -300, ease:Power1.easeIn}, 0.3
-  );
+$('.fade-in-cards').each(function() {
 
-var secondRow = new ScrollMagic.Scene({
-  triggerElement: '.card-4',
-  triggerHook: 1
+  // Build a tween.
+  var tweenProjectCards = TweenMax.from($(this), 0.2, {autoAlpha: 0, y: "+=75", ease:Power1.easeOut});
+
+  var cardsAnimation = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.5,
+    reverse: false
+  })
+  .setTween(tweenProjectCards)
+  .addIndicators({
+    name: "fade scene",
+    colorTrigger: "purple",
+    colorStart: "black", 
+    colorEnd: "black"
+  })
+  .addTo(controller)
+
 })
-.setTween(
-  TweenMax.from('.card4', 1,  {autoAlpha: 0, y: 100, ease:Power1.easeIn}, 0.4)
-  ).addTo(controller)
-
 
 // ===================================================
 // HAMBURGER MENU
