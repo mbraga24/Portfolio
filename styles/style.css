@@ -5,16 +5,15 @@
 
 body {
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-  color: #e6ffff ;
+  color: #e6ffff;
+  background-color: #e6ffff;
   line-height: 1.6;
-  height: 100vh; 
-  text-shadow: 2px 2px 1px #000000;
   /* overflow: hidden; */
 } 
 
 .container {
   width: 100%;
-  height: 100%;
+  height: 100%; 
   scroll-snap-type: y mandatory;
 }
 
@@ -24,10 +23,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   width: 100%;
   height: 100vh;
   scroll-snap-align: center;
+  text-shadow: 2px 2px 1px #000000;
+  text-align: center;
 }
  
 .sections h1 {
@@ -42,7 +42,7 @@ body {
 }
 
 .sections p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .sections h3 {
@@ -50,34 +50,58 @@ body {
   margin-top: 20px;
 }
 
-section#home {
+#text-hero {
+  width: 100% !important;
+  left: 0 !important;
+  text-align: center;
+}
+
+#home {
   color: #e6ffff;
   position: relative;
-  background: linear-gradient(45deg, #990033, #4430ad, #d35252, #0077B3);
+  background: linear-gradient(90deg, #5EBD3E, #FFB900, #F78200, #E23838, #E23838, #973999, #009CDF);
   background-size: 400% 400%;
-  animation: change 10s ease-in-out infinite; 
-  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%); */
+  animation: change 15s ease-in-out infinite; 
+  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%); */
 }
 
-section#projects {
-  background: #e6ffff;
-  position: relative;
+#about {
+  background-color: #d35252;
+}
+
+#resume {
+  background-color: #000033;
+}
+
+#projects {
   color: #000033;
-  text-shadow: none;
+  background-color: #e6ffff;
+  text-shadow: 2px 2px 1px #dfd3d3;
+  position: relative;
+  overflow: hidden;
 }
 
-section#resume {
-  background: #110066;
-  -webkit-clip-path: polygon(0 0, 100% 20%, 100% calc(100% - 10vw), 0 100%);
-  clip-path: polygon(0 0, 100% 10%, 100% calc(100% - 10vw), 0 100%);
+/* .scroll-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.5s ease-out;
 }
 
-.shape {
-  position: absolute;
-  width: 100%;
-  height: .4vh;
-  background: #e6ffff;
+.scroll-in.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+@keyframes change {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 /* Small devices (landscape phones, 576px and up) */
