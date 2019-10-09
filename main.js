@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 // ===================================================
-// HOME PAGE
+//                    HOME PAGE
 // ===================================================
 
   // Init ScrollMagic.
@@ -25,7 +25,7 @@ $(document).ready(function () {
   .addTo(controller)
 
   // Loop through each title.
-  $('fade-in').each(function() {
+  $('.fade-in').each(function() {
 
     // Build a tween.
     var tweenHomePage = TweenMax.from($(this), 0.5, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn});
@@ -47,26 +47,26 @@ $(document).ready(function () {
   });
 
 // ===================================================
-// PROJECTS PAGE
+//                  PROJECTS PAGE
 // ===================================================
 var header = $("#content-header"),
     titleHeader = $("#header-title");
 
 // ================ HEADER ANIMATION ================
 
-TweenMax.from(header, 1, {autoAlpha: 0, y: -400, ease:Power1.easeOut})
-TweenMax.from(titleHeader, 1, {autoAplha: 0, y: -200, delay: 0.5, ease:Power1.easeOut})
+TweenMax.from(header, 0.8, {autoAlpha: 0, y: -400, ease:Power1.easeOut, delay: 0.3})
+TweenMax.from(titleHeader, 0.9, {autoAplha: 0, y: -200, delay: 0.5, ease:Power1.easeOut, delay: 0.3})
 
 // ================ CARD ANIMATION ================
 
 $('.fade-in-cards').each(function() {
 
   // Build a tween.
-  var tweenProjectCards = TweenMax.from($(this), 0.2, {autoAlpha: 0, y: "+=75", ease:Power1.easeOut});
+  var tweenProjectCards = TweenMax.from($(this), 0.2, {autoAlpha: 0, y: "+=75", ease:Power1.easeOut, delay: 0.5});
 
   var cardsAnimation = new ScrollMagic.Scene({
     triggerElement: this,
-    triggerHook: 0.5,
+    triggerHook: 0.7,
     reverse: false
   })
   .setTween(tweenProjectCards)
@@ -81,7 +81,7 @@ $('.fade-in-cards').each(function() {
 })
 
 // ===================================================
-// HAMBURGER MENU
+//                   HAMBURGER MENU
 // ===================================================
 
 $('#toggle').click(function() {
