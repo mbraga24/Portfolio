@@ -27,7 +27,7 @@ body {
   width: 100%;
   height: 100vh;
   scroll-snap-align: center;
-  text-shadow: 1px 1px 1px #000000;
+  /* text-shadow: 1px 1px 1px #bdb6b6; */
   text-align: center;
   scroll-snap-align: center; 
 }
@@ -65,12 +65,13 @@ body {
 }
 
 #about {
-  color: #d3bda1;
+  color: #000000;
   background-color: #efefef;
 }
 
 #resume {
-  background-color: #749887;
+  color: #000000;
+  background-color: #efefef;
 }
 
 #projects {
@@ -78,18 +79,6 @@ body {
   text-shadow: 1px 1px 1px #000000;
   position: relative;
   overflow: hidden;
-}
-
-@keyframes change {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
 }
 
 /* Small devices (landscape phones, 576px and up) */

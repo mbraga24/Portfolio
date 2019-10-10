@@ -33,7 +33,8 @@ $(document).ready(function () {
     // Build scene
     var pageTitlesScene = new ScrollMagic.Scene({
       triggerElement: this,
-      triggerHook: 0.8
+      triggerHook: 0.8,
+      reverse: false
     })
     .setTween(tweenHomePage)
     .addIndicators({
@@ -62,7 +63,8 @@ TweenMax.from(titleHeader, 0.9, {autoAplha: 0, y: -200, delay: 0.5, ease:Power1.
 $('.fade-in-cards').each(function() {
 
   // Build a tween.
-  var tweenProjectCards = TweenMax.from($(this), 0.2, {autoAlpha: 0, y: "+=75", ease:Power1.easeOut, delay: 0.5});
+  // var tweenHomePage = TweenMax.from($(this), 0.5, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn});
+  var tweenProjectCards = TweenMax.from($(this), 0.2, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn, delay: 0.5});
 
   var cardsAnimation = new ScrollMagic.Scene({
     triggerElement: this,
@@ -79,6 +81,18 @@ $('.fade-in-cards').each(function() {
   .addTo(controller)
 
 })
+
+// ===================================================
+//                  ABOUT PAGE
+// ===================================================
+
+var inspirationTitle = $(".description-title"); 
+var inspirationText = $(".description");
+
+TweenMax.from(inspirationTitle, 1.5, {autoAlpha: 0, x: -50, ease:Power1.easeOut, delay: 1})
+TweenMax.from(inspirationText, 1.5, {autoAlpha: 0, x: 40, ease:Power1.easeOut, delay: 1})
+
+
 
 // ===================================================
 //                   HAMBURGER MENU
