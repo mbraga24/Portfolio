@@ -64,7 +64,7 @@ $('.fade-in-cards').each(function() {
 
   // Build a tween.
   // var tweenHomePage = TweenMax.from($(this), 0.5, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn});
-  var tweenProjectCards = TweenMax.from($(this), 0.2, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn, delay: 0.5});
+  var tweenProjectCards = TweenMax.from($(this), 0.2, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn, delay: 0.2});
 
   var cardsAnimation = new ScrollMagic.Scene({
     triggerElement: this,
