@@ -13,9 +13,6 @@ body {
 .container {
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
 .sections {
@@ -24,11 +21,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 100%;
   height: 100vh;
-  scroll-snap-align: center;
-  text-align: center;
-  scroll-snap-align: center; 
 }
  
 .sections h1 {
@@ -57,7 +52,7 @@ body {
   text-align: center;
 }
 
-#touch {
+.touch {
   color: #222020;
 }
 

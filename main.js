@@ -4,66 +4,77 @@ $(document).ready(function () {
 //                    HOME PAGE
 // ===================================================
 
-  // Init ScrollMagic.
-  var controller = new ScrollMagic.Controller();
+// ================ HEADER ANIMATION ================
 
-  // Pin name.
-  var pinNameScene = new ScrollMagic.Scene({
-    triggerElement: '#text-hero',
-    triggerHook: 0,
-    duration: '30%'
+var delayTouch = $(".touch"),
+    allName = $(".allName"),
+    jobTitle = $(".jobTitle");
+
+TweenMax.from(delayTouch, 0.5, {autoAlpha: 0, ease:Power1.easeOut, delay: 0.3})
+TweenMax.from(allName, 0.5, {autoAlpha: 0, ease:Power1.easeOut, delay: 0.8})
+TweenMax.from(jobTitle, 0.5, {autoAlpha: 0, ease:Power1.easeOut, delay: 1.2})
+
+// Init ScrollMagic.
+var controller = new ScrollMagic.Controller();
+
+// Pin name.
+var pinNameScene = new ScrollMagic.Scene({
+  triggerElement: '#text-hero',
+  triggerHook: 0,
+  duration: '30%'
+})
+.setPin('#text-hero', {pushFollowers: false})
+.addTo(controller)
+
+// Pin name again.
+var pinNameScene2 = new ScrollMagic.Scene({
+  triggerElement: '#about',
+  triggerHook: 0.7
+})
+.setPin('#text-hero', {pushFollowers: false})
+.addTo(controller)
+
+// Loop through each title.
+$('.fade-in').each(function() {
+
+  // Build a tween.
+  var tweenHomePage = TweenMax.from($(this), 0.5, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn});
+
+  // Build scene
+  var pageTitlesScene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.8,
+    reverse: false
   })
-  .setPin('#text-hero', {pushFollowers: false})
+  .setTween(tweenHomePage)
+  // .addIndicators({
+  //   name: "fade scene",
+  //   colorTrigger: "black",
+  //   colorStart: "black", 
+  //   colorEnd: "black"
+  // })
   .addTo(controller)
+});
 
-  // Pin name again.
-  var pinNameScene2 = new ScrollMagic.Scene({
-    triggerElement: '#about',
-    triggerHook: 0.7
-  })
-  .setPin('#text-hero', {pushFollowers: false})
-  .addTo(controller)
+// ===================================================
+//                  PAGE HEADER ANIMATION
+// ===================================================
 
-  // Loop through each title.
-  $('.fade-in').each(function() {
+var header = $("#content-header"),
+    titleHeader = $("#header-title");
 
-    // Build a tween.
-    var tweenHomePage = TweenMax.from($(this), 0.5, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn});
-
-    // Build scene
-    var pageTitlesScene = new ScrollMagic.Scene({
-      triggerElement: this,
-      triggerHook: 0.8,
-      reverse: false
-    })
-    .setTween(tweenHomePage)
-    .addIndicators({
-      name: "fade scene",
-      colorTrigger: "black",
-      colorStart: "black", 
-      colorEnd: "black"
-      // indent: 100
-    })
-    .addTo(controller)
-  });
+TweenMax.from(header, 0.8, {autoAlpha: 0, y: -400, ease:Power1.easeOut, delay: 0.3})
+TweenMax.from(titleHeader, 0.9, {autoAplha: 0, y: -200, delay: 0.5, ease:Power1.easeOut, delay: 0.3})
 
 // ===================================================
 //                  PROJECTS PAGE
 // ===================================================
-var header = $("#content-header"),
-    titleHeader = $("#header-title");
-
-// ================ HEADER ANIMATION ================
-
-TweenMax.from(header, 0.8, {autoAlpha: 0, y: -400, ease:Power1.easeOut, delay: 0.3})
-TweenMax.from(titleHeader, 0.9, {autoAplha: 0, y: -200, delay: 0.5, ease:Power1.easeOut, delay: 0.3})
 
 // ================ CARD ANIMATION ================
 
 $('.fade-in-cards').each(function() {
 
   // Build a tween.
-  // var tweenHomePage = TweenMax.from($(this), 0.5, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn});
   var tweenProjectCards = TweenMax.from($(this), 0.2, {autoAlpha: 0, y: "+=30", ease:Power1.easeIn, delay: 0.2});
 
   var cardsAnimation = new ScrollMagic.Scene({
@@ -72,12 +83,6 @@ $('.fade-in-cards').each(function() {
     reverse: false
   })
   .setTween(tweenProjectCards)
-  .addIndicators({
-    name: "fade scene",
-    colorTrigger: "purple",
-    colorStart: "black", 
-    colorEnd: "black"
-  })
   .addTo(controller)
 
 })
@@ -89,10 +94,8 @@ $('.fade-in-cards').each(function() {
 var inspirationTitle = $(".description-title"); 
 var inspirationText = $(".description");
 
-TweenMax.from(inspirationTitle, 1.5, {autoAlpha: 0, x: -50, ease:Power1.easeOut, delay: 1})
-TweenMax.from(inspirationText, 1.5, {autoAlpha: 0, x: 40, ease:Power1.easeOut, delay: 1})
-
-
+TweenMax.from(inspirationTitle, 1.5, {autoAlpha: 0, x: -30, ease:Power1.easeOut, delay: 1})
+TweenMax.from(inspirationText, 1.5, {autoAlpha: 0, x: 30, ease:Power1.easeOut, delay: 1})
 
 // ===================================================
 //                   HAMBURGER MENU
@@ -121,16 +124,3 @@ $('#toggle').click(function() {
       //  <h2>“And, when you want something, all the universe conspires</h2>
       //   <h2>in helping you to achieve it.”</h2>
       //   <h3>- Paulo Coelho, The Alchemist</h3>
-
-
-// $("#home, #projects, #about, #resume").on("click", function(e) {
-//   if(this.hash !== "") {
-//     e.preventDefault();
-
-//     const hash = this.hash;
-
-//     $("html, body").animate({
-//       scrollTop: $(hash).offset().top
-//     }, 800);
-//   }
-// })
